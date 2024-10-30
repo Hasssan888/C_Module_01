@@ -1,17 +1,24 @@
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main() {
-    // Create a Weapon object with an initial type
-    Weapon myWeapon("Sword");
+    {
+        Weapon club("crude spiked club");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
 
-    // Display the weapon type using getType()
-    std::cout << "Weapon type: " << myWeapon.getType() << std::endl;
-
-    // Change the weapon type using setType()
-    myWeapon.setType("Axe");
-
-    // Display the updated weapon type
-    std::cout << "Updated weapon type: " << myWeapon.getType() << std::endl;
+    {
+        Weapon club("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
 
     return 0;
 }
