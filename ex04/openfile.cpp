@@ -54,9 +54,8 @@ int main(int ac, char **av)
                 while (getline(myFile, line))
                 {
                     replace_str(line, args[1], args[2]);
-                    file <<  line << std::endl ;
+                    file <<  line << std::endl;
                 }
-
         }
         else
             print_error();
