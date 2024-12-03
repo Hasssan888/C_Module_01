@@ -1,8 +1,8 @@
 CPP = c++
 FLAGC = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp openfile.cpp
+SRC = main.cpp Harl.cpp
 OBJ = ${SRC:.cpp=.o}
-NAME = filename
+NAME = Harl
 
 all: ${NAME}
 
