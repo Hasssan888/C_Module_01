@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   openfile.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbakrim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/05 13:16:47 by hbakrim           #+#    #+#             */
+/*   Updated: 2024/12/05 13:16:49 by hbakrim          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "openfile.hpp"
 
 void replaceAndWrite(const std::string &filename, const std::string &s1, const std::string &s2) 
 {
-    std::ifstream inputFile(filename.c_str()); // Convert to const char*
+    std::ifstream inputFile(filename.c_str());
     if (!inputFile) {
         std::cerr << "Error: Cannot open file " << filename << std::endl;
         return;
     }
 
-    std::ofstream outputFile((filename + ".replace").c_str()); // Convert to const char*
+    std::ofstream outputFile((filename + ".replace").c_str());
     if (!outputFile) {
         std::cerr << "Error: Cannot create output file." << std::endl;
         return;

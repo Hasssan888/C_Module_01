@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hbakrim <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/12/05 13:19:25 by hbakrim           #+#    #+#              #
+#    Updated: 2024/12/05 13:19:28 by hbakrim          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CPP = c++
 FLAGC = -Wall -Wextra -Werror #-std=c++98
 SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
@@ -18,4 +30,4 @@ clean:
 fclean: clean
 	rm -f ${NAME}
 
-ret: fclean all
+re: fclean all
